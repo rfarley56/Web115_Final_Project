@@ -13,29 +13,28 @@ Robyn Farley	Sole Developer & Author	Story concept and branching design, Mermaid
 
 Note: This project was completed independently after the assigned partner did not participate.
 
-Application Overview
-Story Premise
+##Application Overview
+###Story Premise
 You play as Ravaryn Nightwillow, warrior-princess of the Silverleaf elves. A creeping Shadowblight is destroying her homeland. The only hope is to form a spirit-bond with a unicorn whose magical gifts can push the blight back.
 
-Gameplay Rules & Navigation
+##Gameplay Rules & Navigation
 
-Start by choosing one of three hunting realms:
-Elheim (Elderwood Veil) — highest difficulty, rarest unicorns, strongest gifts
-Drakenhold (Ashen Peaks) — medium difficulty, more unicorns, solid gifts
-Bastoria (Verdant Shores) — easiest path, most unicorns, moderate gifts
-Each realm has an initial exploration followed by a “second season” of deeper challenges.
-During the second season you must type one priority word: ease, difficulty, or gift. The input is validated with a regular expression.
-Choices increase a Bond Progress score and Affinity. An inventory list and journey log update dynamically as you progress.
-Progress saves automatically using localStorage (JSON) and a cookie that remembers the last realm.
-Keyboard shortcuts: press 1, 2, or 3 for the main choices, Enter to submit text input, and S to force a save.
-Hover over the story image to see a short tooltip hint.
-Endings
+    1. Start by choosing one of three hunting realms:
+        a. Elheim (Elderwood Veil) — highest difficulty, rarest unicorns, strongest gifts
+        b. Drakenhold (Ashen Peaks) — medium difficulty, more unicorns, solid gifts
+        c. Bastoria (Verdant Shores) — easiest path, most unicorns, moderate gifts
+    2. Each realm has an initial exploration followed by a “second season” of deeper challenges.
+    3. During the second season you must type one priority word: ease, difficulty, or gift. The input is validated with a regular expression.
+    4. Choices increase a Bond Progress score and Affinity. An inventory list and journey log update dynamically as you progress.
+    5. Progress saves automatically using localStorage (JSON) and a cookie that remembers the last realm.
+    6. Keyboard shortcuts: press 1, 2, or 3 for the main choices, Enter to submit text input, and S to force a save.
 
-Best — Bonds with the strongest unicorn (highest Spell Knowledge, Ingenuity, Stamina, and Potential). Requires Elheim + “gift” priority + high bond score.
-Middle — Successful bond with a gifted unicorn. Most solid paths reach this ending.
-Bad — No bond forms. Triggered by low bond score or overly cautious choices.
-Secret — After a successful bond, typing the ancient word “alicorn” or “nightwillow” (discovered via a lore fragment) levels the unicorn’s gifts further.
+##Endings
 
+- Best — Bonds with the strongest unicorn (highest Spell Knowledge, Ingenuity, Stamina, and Potential). Requires Elheim + “gift” priority + high bond score.
+- Middle — Successful bond with a gifted unicorn. Most solid paths reach this ending.
+- Bad — No bond forms. Triggered by low bond score or overly cautious choices.
+- Secret — After a successful bond, typing the ancient word “alicorn” or “nightwillow” (discovered via a lore fragment) levels the unicorn’s gifts further.
 
 ## Story Flowchart
 
@@ -80,7 +79,7 @@ How to Run
 4. Image paths in JavaScript are relative to the HTML file (e.g. images/map.jpg), so they resolve correctly.
 
 #Features Implemented
-##HTML: title, three paragraphs with ids, buttons with ids, changing story image
-##CSS: styled layout, buttons, image sizing, responsive design
-##JavaScript: element references, reusable functions, conditionals, loops, dynamic DOM creation, three classes (Player, Unicorn, Realm), JSON save/load, try-catch error handling, cookies, event listeners (click, keydown, mouseenter/mouseleave), text input with regex validation, setTimeout/setInterval, inventory and journal updates, state flags, and score tracking
-##All assets are local. No external libraries are required.
+- HTML: title, three paragraphs with ids, buttons with ids, changing story image
+- CSS: styled layout, buttons, image sizing, responsive design
+- JavaScript: element references, reusable functions, conditionals, loops, dynamic DOM creation, three classes (Player, Unicorn, Realm), JSON save/load, try-catch error handling, cookies,    event listeners (click, keydown, mouseenter/mouseleave), text input with regex validation, setTimeout/setInterval, inventory and journal updates, state flags, and score tracking
+- All assets are local. No external libraries are required.
