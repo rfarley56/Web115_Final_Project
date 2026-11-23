@@ -4,38 +4,39 @@
 
 Interactive browser-based adventure story. Solo final project.
 
-## Team Members and Roles
+The Unicorn Bond: Ravaryn's Quest
+Interactive browser-based elf fantasy adventure. Solo final project.
 
-- **Robyn Farley** — Sole developer and author. Responsible for story design, flowchart, HTML structure, CSS styling, all JavaScript logic (classes, state management, event listeners, validation, endings), image assets, and documentation.
+Team Members and Roles
+Name	Role	Responsibilities
+Robyn Farley	Sole Developer & Author	Story concept and branching design, Mermaid flowchart, HTML structure, CSS styling, all JavaScript (classes, state, event listeners, validation, endings), image assets, and full documentation.
 
-## Application Overview
+Note: This project was completed independently after the assigned partner did not participate.
 
-You play as Ravaryn Nightwillow, warrior-princess of the Silverleaf elves. The Shadowblight is consuming her homeland. Only a spirit-bond with a unicorn can restore balance.
+Application Overview
+Story Premise
+You play as Ravaryn Nightwillow, warrior-princess of the Silverleaf elves. A creeping Shadowblight is destroying her homeland. The only hope is to form a spirit-bond with a unicorn whose magical gifts can push the blight back.
 
-**Gameplay**
-- Choose one of three hunting realms at the start:
-  - **Elheim** (Elderwood Veil) — highest difficulty, rarest unicorns, strongest gifts
-  - **Drakenhold** (Ashen Peaks) — medium difficulty, more unicorns, solid gifts
-  - **Bastoria** (Verdant Shores) — easiest, most unicorns, moderate gifts
-- Each realm has an initial exploration and a “second season” of deeper challenges.
-- At the second season you must declare your priority by typing one word: `ease`, `difficulty`, or `gift`. Input is validated with a regular expression.
-- Your choices raise a Bond Progress score and Affinity. Inventory and a journey log update dynamically.
-- Progress is saved automatically with `localStorage` (JSON) and a cookie remembers the last realm.
-- Keyboard shortcuts: 1 / 2 / 3 for choices, Enter to submit text, S to force-save.
-- Hover the image for a short tooltip.
+Gameplay Rules & Navigation
 
-**Endings**
-- **Best** — Strongest magical unicorn (highest Spell Knowledge, Ingenuity, Stamina, Potential) and complete bond. Triggered by Elheim + gift priority + high bond score.
-- **Middle** — Gifted unicorn and completed bond. Most successful paths land here.
-- **Bad** — No unicorn found or bond refused. Low bond score or hesitant choices.
-- **Secret** — After a successful bond, speaking the ancient word “alicorn” or “nightwillow” (discovered via lore fragment) levels the gifts further.
+Start by choosing one of three hunting realms:
+Elheim (Elderwood Veil) — highest difficulty, rarest unicorns, strongest gifts
+Drakenhold (Ashen Peaks) — medium difficulty, more unicorns, solid gifts
+Bastoria (Verdant Shores) — easiest path, most unicorns, moderate gifts
+Each realm has an initial exploration followed by a “second season” of deeper challenges.
+During the second season you must type one priority word: ease, difficulty, or gift. The input is validated with a regular expression.
+Choices increase a Bond Progress score and Affinity. An inventory list and journey log update dynamically as you progress.
+Progress saves automatically using localStorage (JSON) and a cookie that remembers the last realm.
+Keyboard shortcuts: press 1, 2, or 3 for the main choices, Enter to submit text input, and S to force a save.
+Hover over the story image to see a short tooltip hint.
+Endings
 
-**Navigation**
-Three main buttons drive choices. Text input appears only when needed. Inventory and log accumulate with `createElement` / `appendChild`. Image changes with a dedicated function. All major actions are wrapped in try-catch where appropriate.
+Best — Bonds with the strongest unicorn (highest Spell Knowledge, Ingenuity, Stamina, and Potential). Requires Elheim + “gift” priority + high bond score.
+Middle — Successful bond with a gifted unicorn. Most solid paths reach this ending.
+Bad — No bond forms. Triggered by low bond score or overly cautious choices.
+Secret — After a successful bond, typing the ancient word “alicorn” or “nightwillow” (discovered via a lore fragment) levels the unicorn’s gifts further.
 
-## Story Flowchart
-
-```mermaid
+Story Flowchart
 flowchart TD
     A[Start: Ravaryn Nightwillow] --> B{Choose Realm}
     B -->|Elheim| C[Enter Elheim]
@@ -62,20 +63,20 @@ flowchart TD
     C -->|Turn back| A
     D -->|Turn back| A
     E -->|Turn back| A
-```
+    
+The flowchart contains more than 13 distinct nodes and shows the full branching structure, including the three realm paths, priority validation, bond attempt, and all four endings.
 
-(13+ distinct nodes including all major branches and endings.)
-
-## How to Run
-
-1. Clone or download this repository.
-2. Open `index.html` in any modern browser (or serve the folder with a local server).
-3. All images are in the `images/` folder. JavaScript is external (`script.js`). CSS is external (`styles.css`).
-
-## Features Implemented (Assignment Checklist)
-
-- HTML: title, three paragraphs with ids, buttons with ids, image with id
-- CSS: image sizing, button and text styling, responsive layout
-- JS: element references, multiple functions, conditionals, loops (inventory/log), dynamic DOM creation, 3 classes (Player, Unicorn, Realm), JSON save/load, try-catch, cookies, extensive event listeners (click, keydown, mouseover/mouseout), text input + regex validation, setTimeout / setInterval, image hover tooltip, state flags, inventory via appendChild, score tracking
-
-No external libraries required beyond the browser. All assets local.
+How to Run
+Clone or download this repository.
+Open index.html in any modern browser (or serve the folder with a local server).
+File structure:
+index.html (root)
+css/styles.css
+js/script.js
+images/ (map.jpg, elheim.jpg, drakenhold.jpg, bastoria.jpg, unicorn.jpg, ravaryn.jpg)
+Image paths in JavaScript are relative to the HTML file (e.g. images/map.jpg), so they resolve correctly.
+Features Implemented
+HTML: title, three paragraphs with ids, buttons with ids, changing story image
+CSS: styled layout, buttons, image sizing, responsive design
+JavaScript: element references, reusable functions, conditionals, loops, dynamic DOM creation, three classes (Player, Unicorn, Realm), JSON save/load, try-catch error handling, cookies, event listeners (click, keydown, mouseenter/mouseleave), text input with regex validation, setTimeout/setInterval, inventory and journal updates, state flags, and score tracking
+All assets are local. No external libraries are required.
