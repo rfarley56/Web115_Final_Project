@@ -70,16 +70,17 @@ flowchart TD
 
 
 How to Run
-Clone or download this repository.
-Open index.html in any modern browser (or serve the folder with a local server).
-File structure:
-index.html (root)
-css/styles.css
-js/script.js
-images/ (map.jpg, elheim.jpg, drakenhold.jpg, bastoria.jpg, unicorn.jpg, ravaryn.jpg)
-Image paths in JavaScript are relative to the HTML file (e.g. images/map.jpg), so they resolve correctly.
-Features Implemented
-HTML: title, three paragraphs with ids, buttons with ids, changing story image
-CSS: styled layout, buttons, image sizing, responsive design
-JavaScript: element references, reusable functions, conditionals, loops, dynamic DOM creation, three classes (Player, Unicorn, Realm), JSON save/load, try-catch error handling, cookies, event listeners (click, keydown, mouseenter/mouseleave), text input with regex validation, setTimeout/setInterval, inventory and journal updates, state flags, and score tracking
-All assets are local. No external libraries are required.
+1. Clone or download this repository.
+2. Open index.html in any modern browser (or serve the folder with a local server).
+3. File structure:
+    a. index.html (root)
+    b. css/styles.css
+    c. js/script.js
+    d. images/ (map.jpg, elheim.jpg, drakenhold.jpg, bastoria.jpg, unicorn.jpg, ravaryn.jpg)
+4. Image paths in JavaScript are relative to the HTML file (e.g. images/map.jpg), so they resolve correctly.
+
+#Features Implemented
+##HTML: title, three paragraphs with ids, buttons with ids, changing story image
+##CSS: styled layout, buttons, image sizing, responsive design
+##JavaScript: element references, reusable functions, conditionals, loops, dynamic DOM creation, three classes (Player, Unicorn, Realm), JSON save/load, try-catch error handling, cookies, event listeners (click, keydown, mouseenter/mouseleave), text input with regex validation, setTimeout/setInterval, inventory and journal updates, state flags, and score tracking
+##All assets are local. No external libraries are required.
