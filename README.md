@@ -37,18 +37,35 @@ Bad — No bond forms. Triggered by low bond score or overly cautious choices.
 Secret — After a successful bond, typing the ancient word “alicorn” or “nightwillow” (discovered via a lore fragment) levels the unicorn’s gifts further.
 
 
-# Example Mermaid Diagram
-
-This is an example of a Mermaid diagram in a GitHub README file.
+# Mermaid Diagram
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-    
-
+flowchart TD;
+    A[Start: Ravaryn Nightwillow] --> B{Choose Realm};
+    B -->|Elheim| C[Enter Elheim];
+    B -->|Drakenhold| D[Enter Drakenhold];
+    B -->|Bastoria| E[Enter Bastoria];
+    C --> F[Elheim Second Season];
+    D --> G[Drakenhold Second Season];
+    E --> H[Bastoria Second Season];
+    F --> I[Priority Input: ease / difficulty / gift];
+    G --> I;
+    H --> I;
+    I --> J{Validate & Record Priority};
+    J -->|Valid| K[Priority Result + Unicorn Appears];
+    J -->|Invalid| I;
+    K --> L{Attempt Bond};
+    L -->|High score + Elheim + gift| M[Best Ending];
+    L -->|Solid score| N[Middle Ending];
+    L -->|Low score| O[Bad Ending];
+    N -->|Clue found + secret word| P[Secret Ending];
+    M --> Q[Return to Start];
+    N --> Q;
+    O --> Q;
+    P --> Q;
+    C -->|Turn back| A;
+    D -->|Turn back| A;
+    E -->|Turn back| A;
 
 
 How to Run
