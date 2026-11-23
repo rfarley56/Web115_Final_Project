@@ -36,7 +36,9 @@ Middle — Successful bond with a gifted unicorn. Most solid paths reach this en
 Bad — No bond forms. Triggered by low bond score or overly cautious choices.
 Secret — After a successful bond, typing the ancient word “alicorn” or “nightwillow” (discovered via a lore fragment) levels the unicorn’s gifts further.
 
+
 Story Flowchart
+```mermaid
 flowchart TD
     A[Start: Ravaryn Nightwillow] --> B{Choose Realm}
     B -->|Elheim| C[Enter Elheim]
@@ -64,7 +66,8 @@ flowchart TD
     D -->|Turn back| A
     E -->|Turn back| A
     
-The flowchart contains more than 13 distinct nodes and shows the full branching structure, including the three realm paths, priority validation, bond attempt, and all four endings.
+
+
 
 How to Run
 Clone or download this repository.
